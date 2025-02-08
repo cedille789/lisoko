@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@source "./app.html";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --font-sans: "Pretendard JP Variable" ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.container {
+  @apply xl:w-[64rem] 2xl:w-[64rem];
+}
+
+.pos {
+  @apply text-sm font-medium text-sky-500 dark:text-sky-400;
+}
+
+.word-link {
+  @apply hover:underline;
+}
+
+.button {
+  @apply inline-block cursor-pointer rounded-lg bg-gray-100 px-3 py-1.5 hover:bg-gray-200 active:scale-95 dark:bg-neutral-700 dark:hover:bg-neutral-600;
+
+  &.button-primary {
+    @apply bg-sky-200 hover:bg-sky-300 dark:bg-sky-700 dark:hover:bg-sky-600;
+  }
+}

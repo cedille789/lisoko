@@ -16,19 +16,6 @@
   }
 </script>
 
-<svelte:head>
-  <script>
-    if (
-      localStorage.theme === "dark" ||
-      (!localStorage.theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  </script>
-</svelte:head>
-
 <header
   class="sticky top-0 flex items-center border-b border-b-gray-300 bg-white dark:border-b-neutral-700 dark:bg-neutral-800"
 >
@@ -36,6 +23,7 @@
     <div class="text-2xl"><a href="/">Lisoko</a></div>
     <ul class="flex items-center gap-3">
       <li><a href="/dict">사전</a></li>
+      <li><a href="/posts">게시물</a></li>
     </ul>
     <button
       type="button"

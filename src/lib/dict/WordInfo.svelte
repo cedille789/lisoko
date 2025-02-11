@@ -48,13 +48,6 @@
         <div>
           <span class="text-sm font-medium">{row[0]}</span>
           <span class="text-3xl font-semibold">{word}</span>
-          {#if row[4]}
-            <sup
-              class="rounded-full bg-sky-200 px-1.25 py-0.5 text-xs text-nowrap break-keep whitespace-nowrap dark:bg-sky-600"
-            >
-              {row[4]}
-            </sup>
-          {/if}
         </div>
 
         <div class="ml-auto">
@@ -81,7 +74,10 @@
       {#each definitions as dfns, i}
         {@const pos = poss[i]}
         {#if dfns.length == 1}
-          <div><span class="pos">{pos}</span> {@html dfns[0]}</div>
+          <div>
+            <span class="pos">{pos}</span>
+            <span class="align-middle">{@html dfns[0]}</span>
+          </div>
         {:else}
           <div class="flex flex-col gap-1">
             <span class="pos">{pos}</span>

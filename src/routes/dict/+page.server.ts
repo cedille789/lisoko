@@ -10,7 +10,7 @@ export const load = (async () => {
 
   if ((json as { error: { code: number } }).error) {
     const { error: err } = json as { error: { code: number } };
-    if (err.code == 429) error(429, "Too Many Requests");
+    if (err.code == 429) error(429);
 
     throw err;
   }

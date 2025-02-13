@@ -16,7 +16,7 @@
 }
 
 .word-link {
-  @apply hover:underline;
+  @apply cursor-pointer hover:underline;
 }
 
 .button {

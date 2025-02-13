@@ -7,16 +7,20 @@
   import type { PageServerData } from "./$types";
 
   const { data }: { data: PageServerData } = $props();
-  const tokensArray = getTokensArray(data.sheet);
 
-  id.value = page.url.hash.slice(1);
+  // WordInfo
+  $effect(() => {
+    id.value = page.url.hash.slice(1);
+  });
+  let currentWord = $derived(data.sheet.find((row) => row[0] == id.value));
 
+  // search
   let query = $state(page.url.searchParams.get("q") || "");
   let result = $state(data.sheet);
+  const tokensArray = getTokensArray(data.sheet);
 
   $effect(() => {
     query;
-
     result = search(data.sheet.slice(), tokensArray, query);
   });
 </script>
@@ -24,6 +28,8 @@
 <svelte:head>
   <title>사전 - Lisoko</title>
 </svelte:head>
+
+<svelte:window {onhashchange} />
 
 <div class="container mx-auto px-4 py-8">
   <div class="mb-8 flex flex-col items-center gap-4">
@@ -47,10 +53,10 @@
       {/each}
     </div>
 
-    {#if id.value != ""}
-      {#key id.value}
-        <WordInfo sheet={data.sheet} />
-      {/key}
-    {/if}
+    {#key id.value}
+      {#if currentWord}
+        <WordInfo row={currentWord} sheet={data.sheet} />
+      {/if}
+    {/key}
   </div>
 </div>

@@ -1,4 +1,8 @@
 export function replaceId(str: string, sheet: string[][]) {
+  return str.trim().replaceAll(/#([0-9]+)/g, (_, id) => getWord(id, sheet));
+}
+
+export function replaceIdWithLink(str: string, sheet: string[][]) {
   return str
     .trim()
     .replaceAll("<", "&lt;")
@@ -7,6 +11,10 @@ export function replaceId(str: string, sheet: string[][]) {
 }
 
 export function wordLink(id: string, sheet: string[][]) {
+  return `<button class="word-link" data-id="${id}">${getWord(id, sheet)}</button>`;
+}
+
+function getWord(id: string, sheet: string[][]) {
   const row = sheet.find((row) => row[0] == id)!;
-  return `<a href="#${id}" class="word-link" data-id="${id}">${row[1]}</a>`;
+  return row[1];
 }

@@ -1,39 +1,30 @@
 <script lang="ts">
-  import { pushState } from "$app/navigation";
-  import { page } from "$app/state";
   import X from "lucide-svelte/icons/x";
   import { onMount } from "svelte";
-  import { id } from "./state.svelte";
-  import { replaceId, wordLink } from "./wordLink";
+  import { setId } from "./state.svelte";
+  import { replaceIdWithLink, wordLink } from "./wordLink";
 
-  const { sheet }: { sheet: string[][] } = $props();
+  const { row, sheet }: { row: string[]; sheet: string[][] } = $props();
 
-  const row = sheet.find((row) => row[0] == id.value)!;
   const word = row[1];
   const poss = row[2].split("\n");
   const definitions = row[3]
     .split("\n")
-    .map((dfns) => dfns.split(";").map((dfn) => replaceId(dfn, sheet)));
+    .map((dfns) => dfns.split(";").map((dfn) => replaceIdWithLink(dfn, sheet)));
 
   onMount(() => {
     document.querySelectorAll("#word-info .word-link").forEach((element) => {
       element.addEventListener("click", () => {
-        id.value = (element as HTMLElement).dataset.id!;
+        setId((element as HTMLElement).dataset.id!);
       });
     });
   });
-
-  function close() {
-    id.value = "";
-    page.url.hash = "";
-    pushState(page.url, page.state);
-  }
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
 <div
   class="max-md:fixed max-md:top-0 max-md:left-0 max-md:flex max-md:h-full max-md:w-full max-md:items-center max-md:bg-gray-500/50 max-md:p-4 max-md:backdrop-blur-md md:flex-1 dark:max-md:bg-neutral-700/50"
-  onclick={close}
+  onclick={() => setId("")}
 >
   <div
     id="word-info"
@@ -53,7 +44,7 @@
         <div class="ml-auto">
           <button
             type="button"
-            onclick={close}
+            onclick={() => setId("")}
             class="cursor-pointer rounded-lg p-1.5 hover:bg-gray-100 dark:hover:bg-neutral-700"
           >
             <X size={20} />
@@ -61,9 +52,9 @@
         </div>
       </div>
 
-      {#if row[6]}
+      {#if row[5]}
         <div class="text-gray-600 dark:text-neutral-400">
-          &lt; {@html row[6]
+          &lt; {@html row[5]
             .replaceAll("<", "&lt;")
             .replaceAll(/[0-9]+/g, (id) => wordLink(id, sheet))}
         </div>
@@ -91,10 +82,10 @@
       {/each}
     </div>
 
-    {#if row[5]}
+    {#if row[4]}
       <hr class="mt-4 mb-2" />
       <div>
-        {@html replaceId(row[5], sheet)}
+        {@html replaceIdWithLink(row[4], sheet)}
       </div>
     {/if}
   </div>

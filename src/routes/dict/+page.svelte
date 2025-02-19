@@ -29,8 +29,6 @@
   <title>사전 - Lisoko</title>
 </svelte:head>
 
-<svelte:window {onhashchange} />
-
 <div class="container mx-auto px-4 py-8">
   <div class="mb-8 flex flex-col items-center gap-4">
     <h2 class="text-4xl font-semibold">사전</h2>

@@ -20,7 +20,7 @@
     {#each definitions as definition, i}
       <div>
         <span class="pos">{poss[i]}</span>
-        <span>{definition}</span>
+        <span class="align-middle">{definition}</span>
       </div>
     {/each}
   </div>

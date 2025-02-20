@@ -1,7 +1,7 @@
 ---
 title: 〈욕심 많은 광부 이야기〉 번역
-date: "2025.02.14."
-categories:
+date: "2025.02.20."
+cetegories:
   - 번역
 ---
 
@@ -11,30 +11,30 @@ categories:
 <br />
 
 옛날에 한 광부가 살았습니다.<br />
-Kanazene misoejo, mine okacikoto juotecu.<br />
+Kanazene misoejo, mine okacikoto juotece.<br />
 과거의 언제에(=옛날 옛적에), 어느 광부가 살았습니다.<br />
 <br />
 
 어느날 광부는 자신이 캐온 구리를 창고에 넣고 잠이 들었습니다.<br />
-Minemujo okacikosa siroto okatosokoci gomiu ligocetapi maseku kucoteca.<br />
+Minemujo okacikosa siroto okatosokoci gomiri ligocetapi maseku kucotece.<br />
 어느날에 광부는 자신이 캐 온 구리를 창고에 넣고 잤습니다.<br />
 <br />
 
 잠에서 깬 광부는 구리를 제련하려고 창고를 열었다가 구리가 은으로 바뀐 것을 보았습니다.<br />
-Midoroci okacikosa gomiu sisavurepi ligocetau sacikoteku, gomito taidepi siraokovi maruu muroteca.<br />
+Midoroci okacikosa gomiri sisavurepi ligocetari sacikoteku, gomito taidepi siraokovi maruri murotece.<br />
 일어난 광부는 구리를 제련하려고 창고를 열었고, 구리가 은으로 변해 있는 행위를 보았습니다.<br />
 <br />
 
 기분이 좋아진 광부는 이번엔 은을 많이 캐 와 창고에 넣었습니다.<br />
-Semjuito atomii okacikosa nannajosa taideu tou okatosokeku ligocetapi masoteca.<br />
+Semjuito atomii okacikosa nannajosa taideri tou okatosokeku ligocetapi masotece.<br />
 기분이 좋게 된 광부는 이번에는 은을 많이 캐와 창고에 넣었습니다.<br />
 <br />
 
 다음날 그 은들은 모두 금으로 바뀌어 있었고, 광부는 금을 넣으면 더 좋은 것이 나올 것이라고 생각하여 하루를 더 기다렸습니다.<br />
-Orumujo ane taidetasesa hisae satupi siraokovoteku, okacikosa satuu masezeju tuso aci lijuto sovioazekoe mijakereto junemuu tuso saitoteca.<br />
+Orumujo ane taidetasesa hisae satupi siraokovoteku, okacikosa saturi masezeju tuso aci lijuto sovioazekoe mijakereto junemuri tuso saitotece.<br />
 다음날에 그 은들은 전부로써 금으로 변해 있었고, 광부는 금을 넣으면 더 좋은 물건이 나올 것이라고 생각해서 하루를 더 기다렸습니다.<br />
 <br />
 
 그 다음날 아침 모든 금은 뢴트게늄으로 바뀌어 광부는 죽었습니다.<br />
-Ane orumune solejo hisane satusa rentugenupepi siraereto okacikosa socoteca.<br />
+Ane orumune solejo hisane satusa rentugenupepi siraereto okacikosa socotece.<br />
 그 다음날의 아침에 전부의 금은 뢴트게늄으로 변해서 광부는 죽었습니다.
